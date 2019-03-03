@@ -4947,7 +4947,7 @@ a.badge:focus {
   background-color: #fff;
 }
 .list-group-item > .badge {
-  float: right;                                       
+  float: right;
 }
 .list-group-item > .badge + .badge {
   margin-right: 5px;
@@ -4960,7 +4960,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #decdc3;
+  
 
 
 }
