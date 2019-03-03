@@ -63,6 +63,9 @@ $(document).ready(function(){
     });
 
   $("button#roller").click(function roller(event){
+
+      $("#player2").removeClass("selector");
+      $("#player1").addClass("selector");
       player1.roll = rollDice();
 
       $("#roll-side").text(p1Score.roll);
@@ -71,6 +74,8 @@ $(document).ready(function(){
     });
 
   $("button#roller").click(function roller(event){
+     $("#player1").removeClass("selector");
+     $("#player2").addClass("selector");
 
       player2.roll = rollDice();
 
@@ -80,6 +85,8 @@ $(document).ready(function(){
   });
 
   $("button#holder").click(function holder(event){
+      $("#player2").removeClass("selector");
+      $("#player1").addClass("selector");
       player1.holdDie();
       $("#totalpoints").text(player1.totalpoints);
       $("#currentscore").empty();
@@ -88,6 +95,8 @@ $(document).ready(function(){
   });
 
   $("button#holder").click(function holder(event){
+    $("#player1").removeClass("selector");
+    $("#player2").addClass("selector");
     player2.holdDie();
     $("#totalpoints").text(player2.totalpoints);
     $("#currentscore").empty();
