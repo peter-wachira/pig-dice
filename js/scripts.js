@@ -26,15 +26,18 @@ Player.prototype.gameStart = function () {
 }
 
 
-// tossing the die checking for 1
+// tossing the die checking for 1 and switching turns
 Player.prototype.dieOne = function(){
   if (this.roll ===1){
     this.currentpoints = 0;
     alert("sorry you rolled a one, switch to the other player");
   } else{
     this.currentpoints += this.roll;
+    
   }
 }
+
+
 // holding the die
 Player.prototype.holdDie = function(){
   this.totalpoints += this.currentpoints;
@@ -67,7 +70,7 @@ $(document).ready(function(){
     $("#p1-currentscore #p2-currentscore").empty();
     $(".p1Score").empty();
     $(".p2Score").empty();
-    $("#roll-side").empty();
+    $("#rollsideOne #rollsideTwo").empty();
 
     });
 
@@ -78,7 +81,7 @@ $(document).ready(function(){
       $("#player1").addClass("selector");
       player1.roll = rollDice();
 
-      $("#roll-side").text(player1.roll);
+      $("#rollsideOne").text(player1.roll);
       player1.dieOne();
       $("#p1-currentscore").text(player1.currentpoints);
     });
@@ -89,28 +92,28 @@ $(document).ready(function(){
 
       player2.roll = rollDice();
 
-      $("#roll-side").text(player2.roll);
+      $("#rollsideTwo").text(player2.roll);
       player2.dieOne();
       $("#p2-currentscore").text(player2.currentpoints);
   });
 
-  $("button#holder").click(function (event){
+  $("button#holder").click(function holderOne(event){
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
       player1.holdDie();
       $(".p1Score").text(player1.totalpoints);
       $("#p1-currentscore").empty();
-      $("#roll-side").empty();
+      $("#rollsideOne").empty();
       player1.checkWinner();
   });
 
-  $("button#holder").click(function(event){
+  $("button#holder").click(function holderTwo(event){
     $("#player1").removeClass("selector");
     $("#player2").addClass("selector");
     player2.holdDie();
     $(".p2Score").text(player2.totalpoints);
     $("#p2-currentscore").empty();
-    $("#roll-side").empty();
+    $("#rollsideTwo").empty();
     player2.checkWinner();
   });
 });

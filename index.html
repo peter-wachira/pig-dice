@@ -28,7 +28,7 @@ Author     : Peter Wachira -->
             <button onclick="inst()" style="width:20%;margin-left: 35%;margin-right:45%;" id="instruction" class="btn "type="button" name="button">Instructions </button>
             <br>
           <ol id="instructions">
-            <h4>Rules</h4>
+            <h3>Rules</h3>
             <li>Click the <strong>ROLL DICE</strong> button to roll and generate points.</li>
             <li>Click the <strong>HOLD</strong> button to collect the generated points this will switch to the other player's turn</li>
             <li>If you roll a 1, the rolled points are not collected and it becomes the other player's turn.</li>
@@ -42,6 +42,11 @@ Author     : Peter Wachira -->
               <h2 id="player1">player 1</h2>
             </div>
             <div style="height:10px;width:100%"nclass="spacer">  </div>
+            <div class="roll-value">
+              <h4>You rolled:</h4>
+              <br>
+              <span id="rollsideOne"></span>
+            </div>
             <div class="player1-currrent">
               <h4>Current Score:</h4>
               <span id="p1-currentscore"></span>
@@ -61,10 +66,6 @@ Author     : Peter Wachira -->
               <button onclick="rollerOne(); rollerTwo();"  id="roller" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE</button>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <br>
-              <p>You rolled:</p>
-              <br>
-              <span id="roll-side"></span>
-              <br>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <button onclick="holderOne(); holderTwo(); "id="holder" class="btn "type="button" name="button">HOLD</button>
               <br>
@@ -75,6 +76,11 @@ Author     : Peter Wachira -->
               <h2 id="player2" >player 2</h2>
             </div>
             <div style="height:10px;width:100%"nclass="spacer">  </div>
+            <div class="roll-value">
+              <h4>You rolled:</h4>
+              <br>
+              <span id="rollsideTwo"></span>
+            </div>
             <div class="player2-currrent">
               <h4>Current Score:</h4>
               <span id="p2-currentscore"></span>
