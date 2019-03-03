@@ -72,7 +72,7 @@ $(document).ready(function(){
 
       $("#roll-side").text(player1.roll);
       player1.dieOne();
-      $("#p1Score").text(player1.currentscore);
+      $("#currentpoints").text(player1.currentscore);
     });
 
   $("button#roller").click(function roller(event){
@@ -83,24 +83,24 @@ $(document).ready(function(){
 
       $("#roll-side").text(player2.roll);
       player2.dieOne();
-      $("#p2Score").text(player2.currentscore);
+      $("#currentpoints").text(player2.currentscore);
   });
 
-  $("button#holder").click(function holder(event){
+  $("button#holder").click(function (event){
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
       player1.holdDie();
-      $("#totalpoints").text(player1.totalpoints);
+      $(".p1Score").text(player1.totalpoints);
       $("#currentscore").empty();
       $("#roll-side").empty();
       player1.checkWinner();
   });
 
-  $("button#holder").click(function holder(event){
+  $("button#holder").click(function(event){
     $("#player1").removeClass("selector");
     $("#player2").addClass("selector");
     player2.holdDie();
-    $("#totalpoints").text(player2.totalpoints);
+    $(".p2Score").text(player2.totalpoints);
     $("#currentscore").empty();
     $("#roll-side").empty();
     player2.checkWinner();
