@@ -16,12 +16,22 @@ Skull dice (where the 1 is replaced with a skull) work well for this game.
 
 | General Behavior |   Input   | Output|
 | :-------------: | :-------------: |:-------------: |
-| prompts user with inputs| input is recorded from the form types| scrolls to the next question|
-| Gathers user input | retrieve values from the form types | validates the inputs |
-| Calculates the input values from the use  | radio button values | adds the values|
-| Awards marks| Based on the inputs entered| Displays the final score|
-|Reset form |Retake button is clicked |Resets the form radio buttons|
-|Scrolls to the top | Retake button clicked | Scrolls to the top|
+| The player will click a button, and it will generate a random number from 1 through 6.
+ | click | 0 |
+
+| The player will click  roll button if he receives a 1, the player will add 0 points to their total score. | click | output: 0, next player's turn  |
+
+| The player will clicks  roll button if he receives any number that isn't 1, the player adds the score to their current score.  |  click | summation of current score |
+
+| The player will click a roll button, and their result will display.| click | Generated points |
+
+| The player will click a roll button and receive any number other than one, and can choose to hold their turn.
+ | Click | Hold |
+
+| The player will hold, their turn will end while their points are added to their total score.
+ | click
+ | Turn ends|
+| The player will roll, if their points will total or exceed  100, the player wins the game. | click | winner alert|
 
 
 ## Setup/Installation Requirements
