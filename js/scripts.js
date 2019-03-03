@@ -62,9 +62,17 @@ $(document).ready(function(){
     player1 = new Player(true);
     player2 =  new Player(false);
 
+    player1.gameStart();
+    player2.gameStart();
+    $("#p1-currentscore #p2-currentscore").empty();
+    $(".p1Score").empty();
+    $(".p2Score").empty();
+    $("#roll-side").empty();
+
     });
 
-  $("button#roller").click(function(event){
+
+  $("button#roller").click(function rollerOne(event){
 
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
@@ -72,10 +80,10 @@ $(document).ready(function(){
 
       $("#roll-side").text(player1.roll);
       player1.dieOne();
-      $("#currentpoints").text(player1.currentscore);
+      $("#p1-currentscore").text(player1.currentpoints);
     });
 
-  $("button#roller").click(function roller(event){
+  $("button#roller").click(function rollerTwo(event){
      $("#player1").removeClass("selector");
      $("#player2").addClass("selector");
 
@@ -83,7 +91,7 @@ $(document).ready(function(){
 
       $("#roll-side").text(player2.roll);
       player2.dieOne();
-      $("#currentpoints").text(player2.currentscore);
+      $("#p2-currentscore").text(player2.currentpoints);
   });
 
   $("button#holder").click(function (event){
@@ -91,7 +99,7 @@ $(document).ready(function(){
       $("#player1").addClass("selector");
       player1.holdDie();
       $(".p1Score").text(player1.totalpoints);
-      $("#currentscore").empty();
+      $("#p1-currentscore").empty();
       $("#roll-side").empty();
       player1.checkWinner();
   });
@@ -101,7 +109,7 @@ $(document).ready(function(){
     $("#player2").addClass("selector");
     player2.holdDie();
     $(".p2Score").text(player2.totalpoints);
-    $("#currentscore").empty();
+    $("#p2-currentscore").empty();
     $("#roll-side").empty();
     player2.checkWinner();
   });

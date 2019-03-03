@@ -41,7 +41,14 @@ Author     : Peter Wachira -->
             <div class="header1">
               <h2 id="player1">player 1</h2>
             </div>
+            <div style="height:10px;width:100%"nclass="spacer">  </div>
+            <div class="player1-currrent">
+              <h4>Current Score:</h4>
+              <span id="p1-currentscore"></span>
+            </div>
+            <div style="height:10px;width:100%"nclass="spacer">  </div>
             <div class="player1-total">
+              <h4>Total points:</h4>
                 <span class="p1Score"> </span>
             </div>
           </div>
@@ -51,17 +58,15 @@ Author     : Peter Wachira -->
               <button onclick="starter()" id="starter" class="btn" class="ion-ios-loop" type="button" name="button">Start</button>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <br>
-              <button onclick="roller()"id="roller" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE</button>
+              <button onclick="rollerOne(); rollerTwo();"  id="roller" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE</button>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <br>
               <p>You rolled:</p>
               <br>
               <span id="roll-side"></span>
               <br>
-              <p>Current Score:</p>
-              <span id="currentscore"></span>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
-              <button onclick="holder()"id="holder" class="btn "type="button" name="button">HOLD</button>
+              <button onclick="holderOne(); holderTwo(); "id="holder" class="btn "type="button" name="button">HOLD</button>
               <br>
             </div>
           </div>
@@ -69,8 +74,17 @@ Author     : Peter Wachira -->
             <div class="header3">
               <h2 id="player2" >player 2</h2>
             </div>
+            <div style="height:10px;width:100%"nclass="spacer">  </div>
+            <div class="player2-currrent">
+              <h4>Current Score:</h4>
+              <span id="p2-currentscore"></span>
+            </div>
+            <div style="height:10px;width:100%"nclass="spacer">  </div>
             <div class="player2-total">
-              <span class="p2Score"> </span>
+              <h4>Total points:</h4>
+                <span class="p2Score"> </span>
+            </div>
+
             </div>
          </div>
         </div>
