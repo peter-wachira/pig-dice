@@ -1,0 +1,12 @@
+#rules{
+  width:60%;
+  margin:auto;
+}
+ul , h4{
+  text-align: center;
+}
+
+#roller , #holder{
+  width:60%;
+  margin:auto;
+}

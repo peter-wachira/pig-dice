@@ -7,7 +7,52 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>PIG DICE</h1>
+        <br>
 
+      </div>
+      <div class="well">
+        <div class="row">
+          <div class="panel">
+            <h4>Rules</h4>
+          <ol id="rules">
+            <li>Click the <strong>ROLL</strong> button to roll the die. Each roll is added to the total points.</li>
+            <li>Click the <strong>HOLD</strong> button to collect the rolled points and then it becomes the other player's the turn.</li>
+            <li>If a player rolls a 1 then the rolled points are not collected and it is then the other player's turn.</li>
+            <li>First player to reach 100 points wins.</li>
+          </ol>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="header1">
+              <h2 id="player1">player 1</h2>
+            </div>
+
+            <div class="p1Score"> </div>
+          </div>
+          <div class="col-md-4">
+            <div class="header2">
+              <button id="roller" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE</button>
+              <br>
+              <div style="height:40px;width:100%"nclass="spacer">  </div>
+              <button id="holder" class="btn "type="button" name="button">HOLD</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="header3">
+              <h2 id="player2" >player 2</h2>
+            </div>
+            <div id="p2Score"> </div>
+            <div class="">
+
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
     <script src="js/scripts.js" charset="utf-8"></script>
   </body>
 </html>
