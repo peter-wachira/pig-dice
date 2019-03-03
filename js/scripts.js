@@ -8,7 +8,8 @@ var player1;
 var player2;
 
 var rollDice = function (){
-  return Math.floor((Math.random() * 6) + 1);
+  // return Math.floor((Math.random() * 6) + 1);
+  return Math.floor(6*Math.random())+1;
 }
 
 function Player(changer){
@@ -40,14 +41,15 @@ Player.prototype.holdDie = function(){
   this.currentpoints = 0;
   alert("your turn is over, switch to the other player");
 }
+
 // checking for the winner
 Player.prototype.checkWinner = function(){
   while (this.totalpoints >= 100){
-    alert(" you won the game");
+    alert(" you won the game buddy!");
   }
 }
 //user interface
-$("button#instruction").click(function inst() {
+$("button#instruction").click(function() {
     $("#instructions").slideToggle();
   });
 
@@ -55,22 +57,22 @@ $("button#instruction").click(function inst() {
 $(document).ready(function(){
 
 
-  $("button#starter").click(function starter(event){
+  $("button#starter").click(function(event){
 
     player1 = new Player(true);
     player2 =  new Player(false);
 
     });
 
-  $("button#roller").click(function roller(event){
+  $("button#roller").click(function(event){
 
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
       player1.roll = rollDice();
 
-      $("#roll-side").text(p1Score.roll);
+      $("#roll-side").text(player1.roll);
       player1.dieOne();
-      $("#currentscore").text(currentscore);
+      $("#p1Score").text(player1.currentscore);
     });
 
   $("button#roller").click(function roller(event){
@@ -79,9 +81,9 @@ $(document).ready(function(){
 
       player2.roll = rollDice();
 
-      $("#roll-side").text(p2Score.roll);
+      $("#roll-side").text(player2.roll);
       player2.dieOne();
-      $("#currentscore").text(currentscore);
+      $("#p2Score").text(player2.currentscore);
   });
 
   $("button#holder").click(function holder(event){
