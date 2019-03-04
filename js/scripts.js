@@ -8,8 +8,8 @@ var player1;
 var player2;
 
 var rollDice = function (){
-  // return Math.floor((Math.random() * 6) + 1);
-  return Math.floor(6*Math.random())+1;
+  return Math.floor((Math.random() * 6) + 1);
+  // return Math.floor(6*Math.random())+1;
 }
 
 function Player(changer){
@@ -33,7 +33,7 @@ Player.prototype.dieOne = function(){
     alert("sorry you rolled a one, switch to the other player");
   } else{
     this.currentpoints += this.roll;
-    
+
   }
 }
 
@@ -49,6 +49,7 @@ Player.prototype.holdDie = function(){
 Player.prototype.checkWinner = function(){
   while (this.totalpoints >= 100){
     alert(" you won the game buddy!");
+    gameStart();
   }
 }
 //user interface
@@ -67,15 +68,15 @@ $(document).ready(function(){
 
     player1.gameStart();
     player2.gameStart();
-    $("#p1-currentscore #p2-currentscore").empty();
+    $("#p1-currentscore, #p2-currentscore").empty();
     $(".p1Score").empty();
     $(".p2Score").empty();
-    $("#rollsideOne #rollsideTwo").empty();
+    $("#rollsideOne, #rollsideTwo").empty();
 
     });
 
 
-  $("button#roller").click(function rollerOne(event){
+  $("button#roller1").click(function rollerOne(event){
 
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
@@ -86,7 +87,7 @@ $(document).ready(function(){
       $("#p1-currentscore").text(player1.currentpoints);
     });
 
-  $("button#roller").click(function rollerTwo(event){
+  $("button#roller2").click(function rollerTwo(event){
      $("#player1").removeClass("selector");
      $("#player2").addClass("selector");
 
@@ -97,7 +98,7 @@ $(document).ready(function(){
       $("#p2-currentscore").text(player2.currentpoints);
   });
 
-  $("button#holder").click(function holderOne(event){
+  $("button#holder1").click(function holderOne(event){
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
       player1.holdDie();
@@ -107,7 +108,7 @@ $(document).ready(function(){
       player1.checkWinner();
   });
 
-  $("button#holder").click(function holderTwo(event){
+  $("button#holder2").click(function holderTwo(event){
     $("#player1").removeClass("selector");
     $("#player2").addClass("selector");
     player2.holdDie();

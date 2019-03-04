@@ -60,14 +60,17 @@ Author     : Peter Wachira -->
           <div class="col-md-4">
             <div class="header2">
               <br>
-              <button onclick="starter()" id="starter" class="btn" class="ion-ios-loop" type="button" name="button">Start</button>
+              <button onclick="starter()" id="starter" class="btn" class="ion-ios-loop" type="button" name="button">Start Game</button>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <br>
-              <button onclick="rollerOne(); rollerTwo();"  id="roller" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE</button>
+              <button onclick="rollerOne()"  id="roller1" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE1</button>
+              <button onclick="rollerTwo()"  id="roller2" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE2</button>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <br>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
-              <button onclick="holderOne(); holderTwo(); "id="holder" class="btn "type="button" name="button">HOLD</button>
+              <button onclick="holderOne()" id="holder1" class="btn "type="button" name="button">HOLD DICE1</button>
+
+              <button onclick="holderTwo(); "id="holder2" class="btn "type="button" name="button">HOLD DICE2</button>
               <br>
             </div>
           </div>
@@ -90,12 +93,11 @@ Author     : Peter Wachira -->
               <h4>Total points:</h4>
                 <span class="p2Score"> </span>
             </div>
-
             </div>
          </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
     <script src="js/scripts.js" charset="utf-8"></script>
   </body>
 </html>
