@@ -4,29 +4,31 @@ Author     : Peter Wachira -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>pig dice</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1 id="heading1"> <img src="resources/walkingpig.gif" style="height:100px;width:150px;"alt="">&nbsp &nbsp  &nbsp PIG DICE &nbsp &nbsp  &nbsp<img src="resources/opendice.gif" style="height:100px;width:150px;"alt=""></h1>
-        <br>
 
-      </div>
-      <div class="well">
-        <div class="row">
-          <div class="panel">
+<head>
+  <meta charset="utf-8">
+  <title>pig dice</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+</head>
 
-            <button onclick="inst()" style="width:20%;margin-left: 35%;margin-right:45%;" id="instruction" class="btn "type="button" name="button">Instructions </button>
-            <br>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 id="heading1"> <img src="resources/walkingpig.gif" style="height:100px;width:150px;" alt="">&nbsp &nbsp &nbsp PIG DICE &nbsp &nbsp &nbsp<img src="resources/opendice.gif" style="height:100px;width:150px;" alt=""></h1>
+      <br>
+
+    </div>
+    <div class="well">
+      <div class="row">
+        <div class="panel">
+
+          <button onclick="inst()" style="width:20%;margin-left: 35%;margin-right:45%;" id="instruction" class="btn " type="button" name="button">Instructions </button>
+          <br>
           <ol id="instructions">
             <h3>Rules</h3>
             <li>Click the <strong>ROLL DICE</strong> button to roll and generate points.</li>
@@ -35,69 +37,70 @@ Author     : Peter Wachira -->
             <li>If any of the players reach 100 points he/she becomes the winner of the game</li>
           </ol>
         </div>
+      </div>
+      <div class="row">
+        <div id="player1-section" class="col-md-4">
+          <div class="header1">
+            <h2 id="player1">player 1</h2>
+          </div>
+          <div style="height:10px;width:100%" nclass="spacer"> </div>
+          <div class="roll-value">
+            <h4>You rolled:</h4>
+            <br>
+            <span id="rollsideOne"></span>
+          </div>
+          <div class="player1-currrent">
+            <h4>Current Score:</h4>
+            <span id="p1-currentscore"></span>
+          </div>
+          <div style="height:10px;width:100%" nclass="spacer"> </div>
+          <div class="player1-total">
+            <h4>Total points:</h4>
+            <span class="p1Score"> </span>
+          </div>
         </div>
-        <div class="row">
-          <div id="player1-section" class="col-md-4">
-            <div class="header1">
-              <h2 id="player1">player 1</h2>
-            </div>
-            <div style="height:10px;width:100%"nclass="spacer">  </div>
-            <div class="roll-value">
-              <h4>You rolled:</h4>
-              <br>
-              <span id="rollsideOne"></span>
-            </div>
-            <div class="player1-currrent">
-              <h4>Current Score:</h4>
-              <span id="p1-currentscore"></span>
-            </div>
-            <div style="height:10px;width:100%"nclass="spacer">  </div>
-            <div class="player1-total">
-              <h4>Total points:</h4>
-                <span class="p1Score"> </span>
-            </div>
-          </div>
-          <div id="middle-section" class="col-md-4">
-            <div class="header2">
-              <br>
-              <button onclick="starter()" id="starter" class="btn" class="ion-ios-loop" type="button" name="button">Start Game</button>
-              <div style="height:10px;width:100%"nclass="spacer">  </div>
-              <br>
-              <button onclick="rollerOne()"  id="roller1" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE1</button>
-              <button onclick="rollerTwo()"  id="roller2" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE2</button>
-              <div style="height:10px;width:100%"nclass="spacer">  </div>
-              <br>
-              <div style="height:10px;width:100%"nclass="spacer">  </div>
-              <button onclick="holderOne()" id="holder1" class="btn primary "type="button" name="button">HOLD DICE1</button>
+        <div id="middle-section" class="col-md-4">
+          <div class="header2">
+            <br>
+            <button onclick="starter()" id="starter" class="btn" class="ion-ios-loop" type="button" name="button">Start Game</button>
+            <div style="height:10px;width:100%" nclass="spacer"> </div>
+            <br>
+            <button onclick="rollerOne()" id="roller1" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE1</button>
+            <button onclick="rollerTwo()" id="roller2" class="btn" class="ion-ios-loop" type="button" name="button">ROLL DICE2</button>
+            <div style="height:10px;width:100%" nclass="spacer"> </div>
+            <br>
+            <div style="height:10px;width:100%" nclass="spacer"> </div>
+            <button onclick="holderOne()" id="holder1" class="btn primary " type="button" name="button">HOLD DICE1</button>
 
-              <button onclick="holderTwo(); "id="holder2" class="btn "type="button" name="button">HOLD DICE2</button>
-              <br>
-            </div>
+            <button onclick="holderTwo(); " id="holder2" class="btn " type="button" name="button">HOLD DICE2</button>
+            <br>
           </div>
-          <div id="player2-section" class="col-md-4">
-            <div class="header3">
-              <h2 id="player2" >player 2</h2>
-            </div>
-            <div style="height:10px;width:100%"nclass="spacer">  </div>
-            <div class="roll-value">
-              <h4>You rolled:</h4>
-              <br>
-              <span id="rollsideTwo"></span>
-            </div>
-            <div class="player2-currrent">
-              <h4>Current Score:</h4>
-              <span id="p2-currentscore"></span>
-            </div>
-            <div style="height:10px;width:100%"nclass="spacer">  </div>
-            <div class="player2-total">
-              <h4>Total points:</h4>
-                <span class="p2Score"> </span>
-            </div>
-            </div>
-         </div>
+        </div>
+        <div id="player2-section" class="col-md-4">
+          <div class="header3">
+            <h2 id="player2">player 2</h2>
+          </div>
+          <div style="height:10px;width:100%" nclass="spacer"> </div>
+          <div class="roll-value">
+            <h4>You rolled:</h4>
+            <br>
+            <span id="rollsideTwo"></span>
+          </div>
+          <div class="player2-currrent">
+            <h4>Current Score:</h4>
+            <span id="p2-currentscore"></span>
+          </div>
+          <div style="height:10px;width:100%" nclass="spacer"> </div>
+          <div class="player2-total">
+            <h4>Total points:</h4>
+            <span class="p2Score"> </span>
+          </div>
         </div>
       </div>
-    <!-- </div> -->
-    <script src="js/scripts.js" charset="utf-8"></script>
-  </body>
+    </div>
+  </div>
+  <!-- </div> -->
+  <script src="js/scripts.js" charset="utf-8"></script>
+</body>
+
 </html>
