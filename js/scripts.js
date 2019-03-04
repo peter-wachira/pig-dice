@@ -115,7 +115,7 @@ $(document).ready(function() {
     $("#p1-currentscore").empty();
     $("#rollsideOne").empty();
     player1.checkWinner();
-  });
+  });    
 
   $("button#holder2").click(function holderTwo(event) {
     $("#player1").removeClass("selector");
