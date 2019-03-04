@@ -7,7 +7,7 @@
 var player1;
 var player2;
 
-var rollDice = function (){
+var diceRoller = function (){
   return Math.floor((Math.random() * 6) + 1);
   // return Math.floor(6*Math.random())+1;
 }
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
       $("#player2").removeClass("selector");
       $("#player1").addClass("selector");
-      player1.roll = rollDice();
+      player1.roll = diceRoller();
 
       $("#rollsideOne").text(player1.roll);
       player1.dieOne();
@@ -91,7 +91,7 @@ $(document).ready(function(){
      $("#player1").removeClass("selector");
      $("#player2").addClass("selector");
 
-      player2.roll = rollDice();
+      player2.roll = diceRoller();
 
       $("#rollsideTwo").text(player2.roll);
       player2.dieOne();
