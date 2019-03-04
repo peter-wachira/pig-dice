@@ -10,14 +10,14 @@ Author     : Peter Wachira -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1 id="heading1">PIG DICE</h1>
+        <h1 id="heading1"> <img src="resources/walkingpig.gif" style="height:100px;width:150px;"alt="">&nbsp &nbsp  &nbsp PIG DICE &nbsp &nbsp  &nbsp<img src="resources/opendice.gif" style="height:100px;width:150px;"alt=""></h1>
         <br>
 
       </div>
@@ -37,7 +37,7 @@ Author     : Peter Wachira -->
         </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div id="player1-section" class="col-md-4">
             <div class="header1">
               <h2 id="player1">player 1</h2>
             </div>
@@ -57,7 +57,7 @@ Author     : Peter Wachira -->
                 <span class="p1Score"> </span>
             </div>
           </div>
-          <div class="col-md-4">
+          <div id="middle-section" class="col-md-4">
             <div class="header2">
               <br>
               <button onclick="starter()" id="starter" class="btn" class="ion-ios-loop" type="button" name="button">Start Game</button>
@@ -68,13 +68,13 @@ Author     : Peter Wachira -->
               <div style="height:10px;width:100%"nclass="spacer">  </div>
               <br>
               <div style="height:10px;width:100%"nclass="spacer">  </div>
-              <button onclick="holderOne()" id="holder1" class="btn "type="button" name="button">HOLD DICE1</button>
+              <button onclick="holderOne()" id="holder1" class="btn primary "type="button" name="button">HOLD DICE1</button>
 
               <button onclick="holderTwo(); "id="holder2" class="btn "type="button" name="button">HOLD DICE2</button>
               <br>
             </div>
           </div>
-          <div class="col-md-4">
+          <div id="player2-section" class="col-md-4">
             <div class="header3">
               <h2 id="player2" >player 2</h2>
             </div>

@@ -1,17 +1,39 @@
+
+/* Created on : Feb 8th, 2019, 8:39:38 PM
+Author     : Peter Wachira  */
+
 body{
-  background-color:#f8eeb4;
+  background-color:#fbfad3;
 }
 .well{
-  background-color: #ffe26f;
+  background-color: #679186;
   font-family: 'Inconsolata', monospace;
+  font-size:20px;
 }
 .panel{
-  background-color: #ffe26f;
+  background-color: #679186;
+  opacity: 0.9;
   font-family: 'Inconsolata', monospace;
+  font-size:20px;
 }
 .jumbotron{
-  background-color:#c5ecbe;
+  background-color:#fed9ca;
 }
+  button {
+  background-color:#fbfad3;
+  color:#264e70;
+}
+#player1-section{
+
+background-color:#cdffeb;
+opacity: 0.9;
+}
+#player2-section{
+
+background-color: #cdffeb;
+opacity: 0.9;
+}
+
 #instructions{
   width:60%;
   margin:auto;
@@ -29,7 +51,9 @@ ul ,h3{
 }
  #heading1{
   text-align: center;
-  font-family: 'Lobster', cursive;
+  font-family: 'Playfair Display SC', serif;
+
+
 
 }
 #instructions{
@@ -38,4 +62,8 @@ ul ,h3{
 .selector{
   font-family: 'Vollkorn', serif;
   color:#bc2525;
+  text-transform: uppercase;
+  font-style: bold;
+  text-decoration: underline;
+
 }
