@@ -68,6 +68,8 @@ $(document).ready(function(){
 
     player1.gameStart();
     player2.gameStart();
+    $("#player2").removeClass("selector");
+    $("#player1").removeClass("selector");
     $("#p1-currentscore, #p2-currentscore").empty();
     $(".p1Score").empty();
     $(".p2Score").empty();
