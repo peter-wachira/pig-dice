@@ -30,6 +30,7 @@ Player.prototype.gameStart = function() {
   this.roll = 0;
   this.currentpoints = 0;
   this.totalpoints = 0;
+  $("#player1-section, #player2-section").removeClass("winner");
 }
 
 
@@ -56,6 +57,7 @@ Player.prototype.holdDie = function() {
 Player.prototype.checkWinner = function() {
   while (this.totalpoints >= 100) {
     alert(" you won the game buddy!");
+    $("#player1-section, #player2-section").addClass("winner");
     gameStart();
   }
 }
@@ -115,7 +117,7 @@ $(document).ready(function() {
     $("#p1-currentscore").empty();
     $("#rollsideOne").empty();
     player1.checkWinner();
-  });    
+  });
 
   $("button#holder2").click(function holderTwo(event) {
     $("#player1").removeClass("selector");

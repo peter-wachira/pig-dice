@@ -36,11 +36,12 @@ opacity: 0.9;
 
 #instructions{
   width:60%;
-  margin:auto;    
+  margin:auto;
 }
 h4{
   text-align: left;
 }
+
 ul ,h3{
   text-align: center;
 }
@@ -68,4 +69,9 @@ ul ,h3{
   font-style: bold;
   text-decoration: underline;
 
+}
+.winner{
+  background-image: url("http://www.dellawards.com/components/com_virtuemart/shop_image/product/Metal_Cup_Trophy_4d7dac87ed855.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
